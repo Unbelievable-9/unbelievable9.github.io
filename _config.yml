@@ -5,15 +5,15 @@
 # Site
 
 title: Unbelievable Notes
-subtitle: Tech, Life, Inspiration
+subtitle: 
 description: ⛹️‍ Lifetime Baller<br>🖥 Hackintosh Advocate<br>📱 iOS Developer<br>💻 Web Developer
 author: Unbelievable9
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://unbelievable9.info
+url: https://unbelievable9.info
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cactus-dark
+theme: cactus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
