@@ -1,7 +1,6 @@
 ---
 title: Swift-S1C6
 date: 2016-08-18 10:56:20
-categories: Swift 基础
 tags: Swift
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Swift-S1C4
 date: 2016-08-15 17:10:27
-categories: Swift 基础
 tags: Swift
 ---
 
