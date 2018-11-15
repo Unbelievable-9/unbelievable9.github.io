@@ -16,7 +16,7 @@ tags: Hackintosh
 对于当时的我来说 这是一个无比牛逼且近乎于神秘的系统 只有花费高昂的价格购买苹果电脑才能用到的东西
 但是等一等 好像有什么不对劲？这两个同学用的是联想啊 这不科学 😤
 
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-1.jpg "Lenovo Hackintosh Laptop")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8l4iaehdj20go0ci3zj.jpg "Lenovo Hackintosh Laptop")
 
 ## 什么是 Hackintosh?
 前文提到的小故事 让我对在普通计算机上安装苹果系统产生了浓厚的兴趣
@@ -31,7 +31,7 @@ tags: Hackintosh
 把这两个词连接起来我感觉更能说明什么是 **Hackintosh** 
 对于像我一样爱折腾的人来说 绝对充满了吸引力
 
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-2.jpg "Hack + Macintosh")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8l734ehkj218g170q9q.jpg "Hack + Macintosh")
 
 ## 写在 Hack 之前
 如果有人在读这篇博文 现在肯定不开心了: **你BB这么半天都是些虚的 赶紧说怎么装系统** 😤
@@ -90,7 +90,7 @@ tags: Hackintosh
 
 最后做出我的最终推荐
 
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-3.jpg "Intel i5 7500 CPU")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8l79zhgwj20k00k1tid.jpg "Intel i5 7500 CPU")
 
 ### 主板
 主板这部分的内容 主要是针对组装台式机进行说明 笔记本的问题后面会单独说明
@@ -129,7 +129,7 @@ tags: Hackintosh
 
 下面是我推荐的主板 **技嘉 B250M-D3H**
 
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-5.jpg "技嘉 B250M-D3H")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8l7jmyl8j20hs0dcjsn.jpg "技嘉 B250M-D3H")
 
 ### 显卡
 显卡这部分对于完美的 Hackintosh 也非常重要 通常有下面两种选择
@@ -150,7 +150,7 @@ Hackintosh 中的独立显卡 并不像 CPU 部分那样受限
 
 下面是我推荐的显卡 **华硕 Radeon RX 560**
 
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-6.png "华硕 Radeon RX 560")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8l7te2r1j20dw0dwwfe.jpg "华硕 Radeon RX 560")
 
 ### 无线网卡
 之所以要把无线网卡这一部分独立出来说明 是因为这个小部件能极大的提高整个 Hackintosh 的完整度

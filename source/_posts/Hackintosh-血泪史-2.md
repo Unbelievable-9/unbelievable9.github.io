@@ -91,26 +91,26 @@ tags: Hackintosh
 - 临时设置系统语言为英文
     制作U盘安装镜像时 需要用到英文语言环境 我们先进行这一步设置
     - 打开 **系统偏好设置** -> 进入 **语言与地区** -> 修改首选语言为 **英文** —> **重启**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-10.png "修改系统语言为英文")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lbuatpbj20ik0d375d.jpg "修改系统语言为英文")
 
 - 格式化 U盘
     在 MacOS 中格式化 U盘 需要用到系统自带的 **Disk Utility (磁盘工具)** 
     具体方式如下
     
     - 打开 **Disk Utility** (可以利用右上角放大镜 🔍 进行查找) -> 在左侧找到U盘
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-7.png "磁盘工具")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lajs18qj21fs0vegsl.jpg "磁盘工具")
 
     - 选中U盘后点击 **Erase (抹掉)** -> 请按照下进行设置 —> 完成设置后单击 **Erase**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-8.png "抹掉")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lb2jstoj21fs0vetgx.jpg "抹掉")
 
     - 抹掉成功过会有如下图提示 点击 **Done** 完成U盘准备工作
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-9.png "抹掉U盘成功")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lbfopt6j21fs0vejyt.jpg "抹掉U盘成功")
 
 - 利用 UniBeast 制作安装U盘
     注意 如果系统目前不是英文语言环境 那么是无法打开 UniBeast 的 请再次确认系统语言环境
     
     - 打开 UniBeast -> 一路 **Contiune** -> 选中之前准备好的 **U盘** (如下图) -> **Continue**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-11.png "目标介质选择")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lc8s4usj21920xgn5m.jpg "目标介质选择")
 
     - 选择启动方式 -> 选择 **UEFI Boot Mode** -> **Continue**
         关于这里我想多说一下关于启动方式的问题 这个选项主要取决于你的主板
@@ -122,17 +122,17 @@ tags: Hackintosh
         但是现在已经2018年了 如果你手里还在使用 6/5 甚至更早系列的主板和对应的 CPU
         我的建议是 整体升级下主板和 CPU 以获得更好的体验
 
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-12.png "启动方式选择")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lcn68cqj21920xgwpf.jpg "启动方式选择")
 
     - 显卡驱动设置 -> 不勾选 -> **Continue**
         这部分主要针对一些 **NVIDIA** 和 **AMD** 的老显卡进行简单的驱动
         被支持的老显卡型号可以在下图中看到 如果你是根据我的推荐选择的 **AMD Radeon** 新显卡
         或者是 **NVIDIA** 系列的新显卡 这里都不需要选中 
 
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-15.jpg "显卡驱动选择")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8ldoh01gj20mj0gqdhh.jpg "显卡驱动选择")
     
     - 安装选项验证 -> 参考下图 至少有下面三个图标 -> **Continue**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-13.png "安装选项验证")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8ld1o6tmj21920xgqe9.jpg "安装选项验证")
         
     - 制作安装U盘
         这里 UniBeast 就开始制作系统安装U盘了
@@ -141,7 +141,7 @@ tags: Hackintosh
         比如你使用的是一台2010年以前的 Macbook Pro 那可能需要接近 **20分钟** 的样子
         总之这一步需要的 就是耐心 新鲜的系统安装U盘马上就要出炉了 🔥
 
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-14.png "安装U盘制作")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8ldbcm7jj20mj0gqdi8.jpg "安装U盘制作")
         
 ### 安装系统
 系统安装U盘制作好之后 接下来就是安装了 在安装之前最重要的就是对主板进行设置
@@ -164,7 +164,7 @@ CPU 是否支持虚拟化技术 可以去 [Intel 官网](https://ark.intel.com/)
 接下来要做的就是插上之前烧好的 **系统安装U盘** 并启动主机 
 一切顺利的话 你会看到一个类似下图的引导界面
 
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-16.png "Clover 引导界面")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8le6igdxj20h20d475h.jpg "Clover 引导界面")
 
 如果你的机器里有其他分区 也会显示这里 在安装时 我们需要选则
 
@@ -198,10 +198,10 @@ CPU 是否支持虚拟化技术 可以去 [Intel 官网](https://ark.intel.com/)
 
 - 根据喜好选择系统语言 下面以 **英文** 为例
 - 选择 **Disk Utility (磁盘工具)**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-17.png "磁盘工具")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lekt72wj20m80got9w.jpg "磁盘工具")
 - 在左侧找到 **你机器中的硬盘** 注意 **不是安装用的U盘** 点击 **Erase (抹掉)** 
 - 按下图中进行设置 **Name** 推荐填写 **Macintosh HD** 然后 **Erase (抹掉)** 
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-18.png "格式化设置")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8levw49hj20m80gotaj.jpg "格式化设置")
 - 完成后单击左上角 **Disk Utility (磁盘工具)** 选择 **退出**
 
 现在我们用来安装系统的硬盘 已经准备好了 接下来就是正式安装系统了
@@ -270,18 +270,18 @@ CPU 是否支持虚拟化技术 可以去 [Intel 官网](https://ark.intel.com/)
 
 说了这么多 这个 **MultiBeast** 这么牛逼 那就打开试试
 其实我个人感觉 这个东西就类似于 Hackintosh 世界里的 **简易版驱动精灵**
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-19.png "Hackintosh 版驱动精灵")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lfb26s5j21eq156gwv.jpg "Hackintosh 版驱动精灵")
 
 首先点击左上方的 **Quick Start** 开始进行完善工作
 
 - 选择启动引导模式
     在这里其实就是告诉 **MultiBeast** 要安装什么类型的 Clover 引导 以及使用哪些默认选型
     这里我们选择 **UEFI Boot Mode**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-20.png "启动引导选择")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lfmux0uj21eq156gtj.jpg "启动引导选择")
 
 - 选择上方的 **Driver**
     可以看到 这里有针对 **声卡** **硬盘** **有线网口** **USB接口** 以及 **其他** 内容的相关完善
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-21.png "驱动完善")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lfzqc0zj21eq156gxg.jpg "驱动完善")
     - **Audio**
         大部分声卡可以在 **Realtek ALCxxx** 下面找到 请勾选你的型号
         如果在列表中没有你的型号 你可以尝试在 **Universal** 里勾选 **VoodooHDA** 较新版本的声卡通用驱动
@@ -299,7 +299,7 @@ CPU 是否支持虚拟化技术 可以去 [Intel 官网](https://ark.intel.com/)
 
 - 选择上方的 **Customize**
     这部分里有一些重要的完善选项
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-22.png "其他完善选项")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lgb78lij21eq15611c.jpg "其他完善选项")
     
     - **Graphics Configuration**
         如果你使用 **Intel HD6xx** 的 **集成显卡** 可以勾选 **Intel HD 6xx**
@@ -320,7 +320,7 @@ CPU 是否支持虚拟化技术 可以去 [Intel 官网](https://ark.intel.com/)
 - 最后选择上方的 **Build**
     在这里会显示 所有你需要的完善内容 注意右侧一定要选择 **自己机器内部的磁盘分区**
     确认无误后 请点击又下角 **Install**
-    ![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-23.png "确认并安装")
+    ![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lgu9ivzj21eq156n5s.jpg "确认并安装")
     
 到这里 **MultiBeast** 的使命已经结束 可以关闭机器 拔掉U盘 尝试进入系统吧
 对于 **NVIDIA** 新版显卡的用户 还需要安装第三方驱动 请继续阅读 🧐
@@ -353,4 +353,4 @@ CPU 是否支持虚拟化技术 可以去 [Intel 官网](https://ark.intel.com/)
 
 其实呢 我回答不了这个问题 面对着顶配的 Macbook Pro 2018 无论是13寸 还是15寸 谁不会心动呢
 但是不管它再好 我还是觉得 一起陪我走过这些日日夜夜的 **圈羊一号机** 更可爱~
-![](http://pgme12bh2.bkt.clouddn.com/Hackintosh-1-24.JPG "圈羊一号机")
+![](https://ws1.sinaimg.cn/large/691bd373gy1fx8lh9jxd2j21hc0u0k3y.jpg "圈羊一号机")
