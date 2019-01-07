@@ -1,6 +1,3 @@
-[submodule "themes/cactus-dark"]
-	path = themes/cactus-dark
-	url = git@github.com:probberechts/cactus-dark.git
 [submodule "themes/cactus"]
 	path = themes/cactus
 	url = git@github.com:unbelievable-9/hexo-theme-cactus.git
