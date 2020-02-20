@@ -69,11 +69,7 @@ theme: cactus
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: rsync
-  host: 47.95.230.73
-  user: root
-  root: /data/wwwroot/www.unbelievable9.info
-  port: 22
-  delete: true
-  verbose: true
-  ignore_errors: false
+  type: git
+  repo: git@github.com:Unbelievable9/unbelievable9.github.io.git
+  branch: pages
+  
