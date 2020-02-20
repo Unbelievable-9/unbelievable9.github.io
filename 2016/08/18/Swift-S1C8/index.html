@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="读书笔记关于 闭包 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 匿名函数 的翻译才让我茅塞顿开。 那么 闭包 作为中文，应该怎么理解呢？">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift-S1C8">
+<meta property="og:url" content="https://unbelievable9.info/2016/08/18/Swift-S1C8/index.html">
+<meta property="og:site_name" content="Unbelievable Notes">
+<meta property="og:description" content="读书笔记关于 闭包 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 匿名函数 的翻译才让我茅塞顿开。 那么 闭包 作为中文，应该怎么理解呢？">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-02-20T08:17:49.600Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift-S1C8">
+<meta name="twitter:description" content="读书笔记关于 闭包 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 匿名函数 的翻译才让我茅塞顿开。 那么 闭包 作为中文，应该怎么理解呢？">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Swift-S1C8</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/08/24/Swift-S1C9/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/08/18/Swift-S1C7/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://unbelievable9.info/2016/08/18/Swift-S1C8/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&text=Swift-S1C8"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&is_video=false&description=Swift-S1C8"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Swift-S1C8&body=Check out this article: https://unbelievable9.info/2016/08/18/Swift-S1C8/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&name=Swift-S1C8&description=&lt;h2 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#读书笔记&#34; class=&#34;headerlink&#34; title=&#34;读书笔记&#34;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;p&gt;关于 &lt;strong&gt;闭包&lt;/strong&gt; 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 &lt;strong&gt;匿名函数&lt;/strong&gt; 的翻译才让我茅塞顿开。&lt;/p&gt;
+&lt;p&gt;那么 &lt;strong&gt;闭包&lt;/strong&gt; 作为中文，应该怎么理解呢？&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记"><span class="toc-number">1.</span> <span class="toc-text">读书笔记</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Swift-S1C8
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Unbelievable Notes</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2016-08-18T09:39:47.000Z" itemprop="datePublished">2016-08-18</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Swift/">Swift</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><p>关于 <strong>闭包</strong> 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 <strong>匿名函数</strong> 的翻译才让我茅塞顿开。</p>
+<p>那么 <strong>闭包</strong> 作为中文，应该怎么理解呢？</p>
+<a id="more"></a>
+<p>在经过一些调研之后，我觉得在知乎上的 <a href="http://www.zhihu.com/question/24084277" target="_blank" rel="noopener">这个话题</a> 中，包含了各位前辈的真知灼见，我个人比较喜欢寿司的那个答案。</p>
+<ul>
+<li><p>基本用法</p>
+<p>根据书上的 Code Snippet，整理了个备忘录</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="comment">//带有 Closure 的函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">operateNumbers</span><span class="params">(x: Int, <span class="number">_</span> y: Int, operation: <span class="params">(Int, Int)</span></span></span> -&gt; <span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = operation(x, y)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//完整调用方法</span></span><br><span class="line">operateNumbers(<span class="number">1</span>, <span class="number">2</span>, operation: &#123; (a: <span class="type">Int</span>, b: <span class="type">Int</span>) -&gt; <span class="type">Int</span> <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//省略返回值的调用方法</span></span><br><span class="line">operateNumbers(<span class="number">3</span>, <span class="number">4</span>, operation: &#123; (a: <span class="type">Int</span>, b: <span class="type">Int</span>) <span class="keyword">in</span></span><br><span class="line">    a - b</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//最简洁的调用方法</span></span><br><span class="line">operateNumbers(<span class="number">5</span>, <span class="number">6</span>, operation: &#123;</span><br><span class="line">    $<span class="number">0</span> * $<span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//Trailing Closure Syntax</span></span><br><span class="line"><span class="comment">//只有在 Closure 作为函数最后一个参数时才可以这么使用</span></span><br><span class="line">operateNumbers(<span class="number">7</span>, <span class="number">8</span>) &#123;</span><br><span class="line">    $<span class="number">0</span> / $<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Trailing Closure Syntax (尾随闭包)</p>
+<p>Closure 和 Swift 中的函数类似，在参数引用的时候，有些变化方式，非常灵活。看到这个 <strong>尾随闭包</strong> 的时候，觉得很有意思，所以去查了一些资料，发现这个语法还是很常用的。</p>
+<p><a href="http://www.cocoachina.com/swift/20160106/14862.html" target="_blank" rel="noopener">CocoaChina 里面有一篇文章</a> 对于 Closure 的实际应用情况，讲的比较到位。</p>
+<p>可以直接参阅 Closure 部分内容</p>
+<ul>
+<li><p>View Controller 传值</p>
+<p>作者首选举了一个 View Controller 之间传值的例子，在用 Objective-C 写程序的时候，这种事我一般都用 Delegate 来做，其实也可以用 Block 来做，个人习惯问题。因为我觉得一个 Controller 里面有各种各样的 Delegate 的话，感觉像拼积木一样，很有层次感。</p>
+<p>看完这个例子实在是手痒，就自己新建工程写了一次，感觉虽然 iOS SDK 的 API 基本没有变化，但是真正在用 Swift 去实现的时候，还是各种不适应，还需要勤加练习。</p>
+<p>测试工程主要的目的就是， 视图控制器1 跳转到 视图控制器2，在 视图控制器2 中的 TextField 里面输入内容，跳转回 视图控制器1 时把输入的内容传回 视图控制器1 并显示，如果没有内容则还原显示。功能很简单，下面附上主要的代码:</p>
+<p><strong>RootViewController.swift</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> File Name:      RootViewController</span></span><br><span class="line"><span class="comment"> Author:         Unbelievable9</span></span><br><span class="line"><span class="comment"> Created Time:   2016-08-22</span></span><br><span class="line"><span class="comment"> Description:    根视图控制器</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> 2016 Unbelievable9 All Rights Reserved.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RootViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="comment">//传递参数内容显示 Label</span></span><br><span class="line">    <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> parametersLabel: <span class="type">UILabel!</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">TapToGoToSecondViewController</span><span class="params">(sender: AnyObject)</span></span> &#123;</span><br><span class="line">        <span class="comment">//获取 Storyboard</span></span><br><span class="line">        <span class="keyword">let</span> storyboard = <span class="type">UIStoryboard</span>(name: <span class="string">"Main"</span>, bundle: <span class="type">NSBundle</span>.mainBundle())</span><br><span class="line"></span><br><span class="line">        <span class="comment">//从 Storyboard 初始化第二个视图控制器</span></span><br><span class="line">        <span class="keyword">let</span> secondViewController =</span><br><span class="line">            storyboard.instantiateViewControllerWithIdentifier(<span class="string">"Second View Controller"</span>) <span class="keyword">as</span>! <span class="type">SecondViewController</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//闭包函数回调实现</span></span><br><span class="line">        secondViewController.onInputStringCallback = &#123; (inputString: <span class="type">String</span>) -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">self</span>.parametersLabel.text = inputString</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//压入第二视图控制器</span></span><br><span class="line">        <span class="keyword">self</span>.navigationController?.pushViewController(secondViewController, animated: <span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>SecondViewController.swift</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> File Name:      SecondViewController</span></span><br><span class="line"><span class="comment"> Author:         Unbelievable9</span></span><br><span class="line"><span class="comment"> Created Time:   2016-08-22</span></span><br><span class="line"><span class="comment"> Description:    第二视图控制器</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> 2016 Unbelievable9 All Rights Reserved.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="comment">//自定义闭包函数</span></span><br><span class="line"><span class="keyword">typealias</span> inputStringClosure = (<span class="type">String</span>) -&gt; <span class="type">Void</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SecondViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="comment">//内容输入 TextField</span></span><br><span class="line">    <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> inputTextField: <span class="type">UITextField!</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> onInputStringCallback: inputStringClosure?</span><br><span class="line"></span><br><span class="line">    <span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">TapToGoBackToRootViewController</span><span class="params">(sender: AnyObject)</span></span> &#123;</span><br><span class="line">        <span class="comment">//内容输入判断</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">self</span>.inputTextField.text != <span class="literal">nil</span> &amp;&amp; <span class="keyword">self</span>.inputTextField.text != <span class="string">""</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">self</span>.onInputStringCallback != <span class="literal">nil</span> &#123;</span><br><span class="line">                <span class="comment">//闭包函数回调</span></span><br><span class="line">                <span class="keyword">self</span>.onInputStringCallback!(<span class="keyword">self</span>.inputTextField.text!)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//闭包函数回调</span></span><br><span class="line">            <span class="keyword">self</span>.onInputStringCallback!(<span class="string">"No Parameter"</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//弹回根视图控制器</span></span><br><span class="line">        <span class="keyword">self</span>.navigationController?.popViewControllerAnimated(<span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Swift 中的 Dealloc</span></span><br><span class="line">    <span class="keyword">deinit</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"\nSecond View Controller is Destroyed."</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现这个基本功能，还牵扯到了即将来临的 Chapter 8 的一些内容，这里当提前热热身。在参考别人代码以及自己尝试模仿实现的时候，给我的感觉就是 Swift 的 Closure 和 Objective-C 的 Block 其实在本质上都是一个东西，只是在两种语言环境下，需要一段时间去适应，多加练习应该不是难事。</p>
+</li>
+<li><p>数组常用闭包函数</p>
+<p>这一部分内容，完全就是在展示 <strong>尾随闭包</strong> 语法使用的典型案例，这里还牵扯到了一些函数式编程的思想，看起来非常的酷，这里不做过多的讨论！</p>
+</li>
+</ul>
+</li>
+<li><p>Challenge</p>
+<p><strong>A.</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">repeatTask</span><span class="params">(times: Int, task: <span class="params">()</span></span></span> -&gt; <span class="type">Void</span>) -&gt; <span class="type">Void</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">1</span>...times &#123;</span><br><span class="line">        task()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//简洁写法</span></span><br><span class="line">repeatTask(<span class="number">10</span>, task: &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Swift Apprentice is a great book!"</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//尾随闭包写法</span></span><br><span class="line">repeatTask(<span class="number">10</span>) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Swift Apprentice is a great book!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>B.</strong></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="comment">//斐波那契递归函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fibonacci</span><span class="params">(number: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> number &lt;= <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> number == <span class="number">1</span> || number == <span class="number">2</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fibonacci(number - <span class="number">1</span>) + fibonacci(number - <span class="number">2</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//题目所需计算函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">mathSum</span><span class="params">(times: Int, operation: <span class="params">(Int)</span></span></span> -&gt; <span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...times &#123;</span><br><span class="line">        result += operation(i)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//平方数 1-10 求和</span></span><br><span class="line"><span class="comment">//简洁写法</span></span><br><span class="line">mathSum(<span class="number">10</span>, operation: &#123;</span><br><span class="line">    $<span class="number">0</span> * $<span class="number">0</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//尾随闭包写法</span></span><br><span class="line">mathSum(<span class="number">10</span>) &#123;</span><br><span class="line">    $<span class="number">0</span> * $<span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//斐波那契数 1-10 求和</span></span><br><span class="line">mathSum(<span class="number">10</span>, operation: fibonacci)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记"><span class="toc-number">1.</span> <span class="toc-text">读书笔记</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://unbelievable9.info/2016/08/18/Swift-S1C8/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&text=Swift-S1C8"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&is_video=false&description=Swift-S1C8"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Swift-S1C8&body=Check out this article: https://unbelievable9.info/2016/08/18/Swift-S1C8/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&name=Swift-S1C8&description=&lt;h2 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#读书笔记&#34; class=&#34;headerlink&#34; title=&#34;读书笔记&#34;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;p&gt;关于 &lt;strong&gt;闭包&lt;/strong&gt; 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 &lt;strong&gt;匿名函数&lt;/strong&gt; 的翻译才让我茅塞顿开。&lt;/p&gt;
+&lt;p&gt;那么 &lt;strong&gt;闭包&lt;/strong&gt; 作为中文，应该怎么理解呢？&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Unbelievable9
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-127419060-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7c1c1f2601a3bdc1117294299affcbdd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'https-www-unbelievable9-info';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+

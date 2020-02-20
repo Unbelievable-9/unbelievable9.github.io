@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="写在前面第一次知道 Hackintosh 这个词语 是在大二的计算机选修课上当时我选了一门 Linux 操作系统的选修课, 课程内容很常规不必多言但是在这门课上有一批计算机学院的同学引起了我注意 我在多次偷瞄屏幕后发现其中有1-2个人拿着最普通的联想笔记本 但是为什么桌面看着不太对劲 🤔我虽然不是一个计算机或软件学院的本科生 但是从小就对计算机有着浓厚的兴趣当时我正在研究如何把 Ubuntu 装">
+<meta name="keywords" content="Hackintosh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hackintosh-血泪史-1">
+<meta property="og:url" content="https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/index.html">
+<meta property="og:site_name" content="Unbelievable Notes">
+<meta property="og:description" content="写在前面第一次知道 Hackintosh 这个词语 是在大二的计算机选修课上当时我选了一门 Linux 操作系统的选修课, 课程内容很常规不必多言但是在这门课上有一批计算机学院的同学引起了我注意 我在多次偷瞄屏幕后发现其中有1-2个人拿着最普通的联想笔记本 但是为什么桌面看着不太对劲 🤔我虽然不是一个计算机或软件学院的本科生 但是从小就对计算机有着浓厚的兴趣当时我正在研究如何把 Ubuntu 装">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8l4iaehdj20go0ci3zj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8l734ehkj218g170q9q.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8l79zhgwj20k00k1tid.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8l7jmyl8j20hs0dcjsn.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8l7te2r1j20dw0dwwfe.jpg">
+<meta property="og:updated_time" content="2020-02-20T08:17:49.598Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hackintosh-血泪史-1">
+<meta name="twitter:description" content="写在前面第一次知道 Hackintosh 这个词语 是在大二的计算机选修课上当时我选了一门 Linux 操作系统的选修课, 课程内容很常规不必多言但是在这门课上有一批计算机学院的同学引起了我注意 我在多次偷瞄屏幕后发现其中有1-2个人拿着最普通的联想笔记本 但是为什么桌面看着不太对劲 🤔我虽然不是一个计算机或软件学院的本科生 但是从小就对计算机有着浓厚的兴趣当时我正在研究如何把 Ubuntu 装">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8l4iaehdj20go0ci3zj.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Hackintosh-血泪史-1</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/10/23/Hackintosh-血泪史-2/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/08/24/Swift-S1C9/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&text=Hackintosh-血泪史-1"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&is_video=false&description=Hackintosh-血泪史-1"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hackintosh-血泪史-1&body=Check out this article: https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&name=Hackintosh-血泪史-1&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-Hackintosh"><span class="toc-number">2.</span> <span class="toc-text">什么是 Hackintosh?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写在-Hack-之前"><span class="toc-number">3.</span> <span class="toc-text">写在 Hack 之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件部分"><span class="toc-number">4.</span> <span class="toc-text">硬件部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU"><span class="toc-number">4.1.</span> <span class="toc-text">CPU</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主板"><span class="toc-number">4.2.</span> <span class="toc-text">主板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显卡"><span class="toc-number">4.3.</span> <span class="toc-text">显卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无线网卡"><span class="toc-number">4.4.</span> <span class="toc-text">无线网卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记本特殊说明"><span class="toc-number">4.5.</span> <span class="toc-text">笔记本特殊说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬件部分总结"><span class="toc-number">4.6.</span> <span class="toc-text">硬件部分总结</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Hackintosh-血泪史-1
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Unbelievable Notes</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2018-10-23T01:35:31.000Z" itemprop="datePublished">2018-10-23</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Hackintosh/">Hackintosh</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>第一次知道 <strong>Hackintosh</strong> 这个词语 是在大二的计算机选修课上<br>当时我选了一门 Linux 操作系统的选修课, 课程内容很常规不必多言<br>但是在这门课上有一批计算机学院的同学引起了我注意 我在多次偷瞄屏幕后发现<br>其中有1-2个人拿着最普通的联想笔记本 但是为什么桌面看着不太对劲 🤔<br>我虽然不是一个计算机或软件学院的本科生 但是从小就对计算机有着浓厚的兴趣<br>当时我正在研究如何把 Ubuntu 装到我的小白本上 自认为从 Win98 开始一直到 Win7<br>我都能一眼认出来 但是这帮哥们儿的电脑怎么看着这么酷呢 😲<br>直到这门选修课快要结束时 我才慢慢的发现这两个人用的好像是传说中的 Mac OS X<br>对于当时的我来说 这是一个无比牛逼且近乎于神秘的系统 只有花费高昂的价格购买苹果电脑才能用到的东西<br>但是等一等 好像有什么不对劲？这两个同学用的是联想啊 这不科学 😤</p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8l4iaehdj20go0ci3zj.jpg" alt title="Lenovo Hackintosh Laptop"></p>
+<h2 id="什么是-Hackintosh"><a href="#什么是-Hackintosh" class="headerlink" title="什么是 Hackintosh?"></a>什么是 Hackintosh?</h2><p>前文提到的小故事 让我对在普通计算机上安装苹果系统产生了浓厚的兴趣<br>正因如此 我乐此不疲的走上了 Hackintosh 的不归路<br>写下这篇博文也是希望做个摆渡人 让对 Hackintosh 感兴趣的人 少走一些弯路<br>下面我来聊聊我所认识的 Hackintosh 究竟是什么</p>
+<p><strong>Hackintosh</strong> 中文直译为 <strong>黑苹果</strong> 主要指所有运行苹果桌面操作系统 <strong>MacOS</strong> 的非苹果官方设备<br>当然这样去解释这个词有些苍白 其实这个词应该分为 <strong>Hack</strong> 和 <strong>Macintosh</strong> 两部分才对<br><strong>Hack</strong> 这个词在计算机世界里 常常和黑客、破解、修改以及控制等词语关联<br><strong>Mactionsh</strong> 是苹果公司旗下所有个人计算机的统称<br>把这两个词连接起来我感觉更能说明什么是 <strong>Hackintosh</strong><br>对于像我一样爱折腾的人来说 绝对充满了吸引力</p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8l734ehkj218g170q9q.jpg" alt title="Hack + Macintosh"></p>
+<h2 id="写在-Hack-之前"><a href="#写在-Hack-之前" class="headerlink" title="写在 Hack 之前"></a>写在 Hack 之前</h2><p>如果有人在读这篇博文 现在肯定不开心了: <strong>你BB这么半天都是些虚的 赶紧说怎么装系统</strong> 😤<br>实不相瞒 我刚开始尝试 Hack 的时候也是同样的的心情 匆匆下载好了所谓 <strong>xxx懒人版</strong> 的镜像<br>用装常见操作系统的方式 把镜像烧到U盘里 迫不及待启动并进入安装界面<br><strong>但是这样做 99% 你不会成功 即使成功安装好了系统也会大概率无法进入系统</strong><br>为什么呢? 因为玩儿 <strong>Hackintosh</strong> 需要的不只是动手能力 还需要充分了解机器的硬件信息</p>
+<h2 id="硬件部分"><a href="#硬件部分" class="headerlink" title="硬件部分"></a>硬件部分</h2><p>当你决定要安装一台属于自己的 <strong>Hackintosh</strong> 之后 要做的第一件事一定是详细了解自己机器的硬件</p>
+<ul>
+<li>Windows:  可以利用 <strong>鲁大师</strong> 获取硬件详细信息 </li>
+<li>Linux:    可以利用 <strong>dmidecode</strong> 命令获取硬件详细信息</li>
+</ul>
+<p>对于硬件的选择方面 后面会针对机器中的每一个部件 分别进行说明和推荐<br>文章内容主要针对台式机进行详细说明 但也适用于大部分笔记本设备</p>
+<ul>
+<li><strong>Intel Atom 系列</strong> 以及 <strong>AMD 全系列</strong> 的 CPU 不在本文讨论范围内</li>
+<li><strong>ARM架构</strong> 同样不在本文讨论范围内</li>
+</ul>
+<p><strong>强烈推荐自选硬件组装台式机!</strong><br>毕竟对于 <strong>Hackintosh</strong> 而言, 最大的乐趣就在于 <strong>从头开始设计整台机器</strong><br>接下来会对各部分硬件做简单的说明和推荐</p>
+<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><p>前文已经提到 在这篇文章中不会讨论的几种架构 这里对 <strong>AMD</strong> 系列的 CPU 做下特别说明<br>首先 搭载 <strong>AMD</strong> 系列的 CPU 的主机是 <strong>可以进行 Hack 的</strong><br>我个人对于 <strong>AMD</strong> 这个品牌是非常推崇的 但是在 <strong>Hackintosh</strong> 的世界里<br>如果一开始在 CPU 部分就选择了 <strong>AMD</strong> 只会增加整个 Hack 个难度<br>对于 MacOS 系统而言 如果不对系统内核(Kernel)进行修改 是无法在 AMD CPU 的机器上安装系统的<br>如果不巧你正好拥有一颗高性能的 <strong>AMD CPU</strong> 我建议你到下面这个地方去寻找一些思路</p>
+<ul>
+<li><a href="https://amd-osx.com/" target="_blank" rel="noopener">AMD OSX</a></li>
+</ul>
+<p>那么我们其实就只剩下 <strong>Intel</strong> 这一个选择了 对于英特尔的 CPU 我有下面一些建议</p>
+<ul>
+<li>选择上一代的主流 CPU </li>
+<li>尽量选择苹果官方设备使用过的CPU</li>
+<li>赛扬(Celeron)系列是不错的高性价比选择</li>
+</ul>
+<p>第一点建议 主要是针对性价比 比如现在 Intel 酷睿系列 CPU 已经出到第8代<br>对于一般的玩家来讲 第7代酷睿i7的7700k 性能已经非常劲爆了<br>相较于最新版的8代i7的8700k 价格也便宜300-500左右 性价比更高一些<br>当然如果你说 我是土豪不差钱 那请直接上 </p>
+<ul>
+<li><a href="https://www.amazon.com/Intel-Xeon-W-2195-TRAY-Processor/dp/B07BRVNM4M" target="_blank" rel="noopener">INTEL XEON W-2191B(iMac Pro 高配 CPU 18核)</a></li>
+</ul>
+<p>第二点建议 主要针对兼容性 选择苹果官方设备使用过的 CPU 可以最大程度的降低风险<br>我在第一次 Hack 的时候 因为笔记本使用了一个非常非主流的 i7 3610qm CPU<br>遇到了 CPU 无法自动变频 无法开启睿频等问题 非常麻烦<br>苹果官方设备使用的 大多都是较为主流的高性能 CPU 选配的时候也很好找<br>不要为了贪小便宜去买一些高性价比但是很罕见的非主流 CPU</p>
+<p>第三点建议 主要是针对预算不是很充足的玩家 赛扬系列的 CPU 价格一向都是非常感人的<br>如果非要亏待 CPU 我建议选择当季最新款的赛扬系列 CPU</p>
+<p>最后做出我的最终推荐</p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8l79zhgwj20k00k1tid.jpg" alt title="Intel i5 7500 CPU"></p>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h3><p>主板这部分的内容 主要是针对组装台式机进行说明 笔记本的问题后面会单独说明<br>首先在选购主板的时候 我建议选择如下三个品牌的主板</p>
+<ul>
+<li>首选 <strong>技嘉主板</strong></li>
+<li>次选 <strong>华硕主板</strong></li>
+<li>再不行选 <strong>微星主板</strong></li>
+</ul>
+<p>这三个品牌的主板声誉都很不错 型号也非常丰富 因为我个人 Hack 的时候都使用的技嘉主板<br>并且该厂的主板非常稳定 价格也相对亲民 所以首推技嘉的主板</p>
+<p>另外主板上有两个比较重要的部件 对于一台较为完美的 Hackintosh 而言是非常重要的</p>
+<ul>
+<li>网卡(有线、无线)</li>
+<li>声卡</li>
+</ul>
+<p>绝大多数主板都会板载以太网口 也就是平时我们连接网线用到的网口<br>在 MacOS 下以太网口在绝大多数情况下都是免驱的<br>免驱的意思就是 在 MacOS 下不需要用到第三方的驱动程序 有线网口可以直接正常使用<br>这部分这里就不多说了 如果你不巧手里又拥有一个非常非主流的主板 那么可以发邮件给我一同交流下<br>而无线网卡部分 对于 Hackintosh 来讲 是非常重要的一部分 后面会单独有一部分做说明</p>
+<p>对于声卡来说 目前 Hackintosh 中支持的板载声卡型号 已经有好心人为我们总结了一份表单</p>
+<ul>
+<li><a href="https://github.com/acidanthera/AppleALC/wiki/Supported-codecs" target="_blank" rel="noopener">Hackintosh 支持驱动的声卡型号</a></li>
+</ul>
+<p>如果你想拥有完美的音频表现 请在购买之前一定确认你选择的主板上的声卡型号在此表单中<br>否则 你可能最后需要绞尽脑汁去找第三方驱动 还没办法修复你那 “无声的 Hackintosh”</p>
+<p>除了需要关注网卡与声卡外 在主板选择方面我还有一些小建议</p>
+<ul>
+<li>不用去追求如 “败家之眼” “电竞专用” 等头衔的主板 如果你是土豪请忽略我</li>
+<li>某些小板会带有无线网卡 同时支持 WiFi 与 蓝牙功能 但是基本上蓝牙功能都无法被驱动 不推荐购买</li>
+<li>主板和 CPU 需要配套购买 购买时请注意型号的匹配</li>
+</ul>
+<p>下面是我推荐的主板 <strong>技嘉 B250M-D3H</strong></p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8l7jmyl8j20hs0dcjsn.jpg" alt title="技嘉 B250M-D3H"></p>
+<h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><p>显卡这部分对于完美的 Hackintosh 也非常重要 通常有下面两种选择</p>
+<ul>
+<li><strong>集成显卡</strong></li>
+<li><strong>独立显卡</strong></li>
+</ul>
+<p>现在 Intel 的 CPU 都会自带性能还不错的集成显卡 这类集显都非常容易驱动 没有太大的难度<br>唯一的问题是 如果你像我一样喜欢用多个显示器 或者希望在 MacOS 下玩儿大型独立游戏<br>集成显卡就无法满足需求了 我们只有转向独立显卡</p>
+<p>Hackintosh 中的独立显卡 并不像 CPU 部分那样受限<br><strong>NVIDIA</strong> 和 <strong>AMD RADEON</strong> 系列的显卡都被支持 这主要得益于苹果对独立显卡的开放政策<br>所以在选择显卡的时候 顾虑不必太多<br>对于N卡而言 英伟达长期会对 MacOS 做驱动更新 这让N卡在 Hackintosh 上稳定运行变得很有保障<br>对于A卡而言 MacOS 本身就支持多种主流型号 可以参考当季苹果官方设备的显卡进行选购<br>对于后续显卡的驱动的问题 文章软件部分会进行更详细的说明</p>
+<p>下面是我推荐的显卡 <strong>华硕 Radeon RX 560</strong></p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8l7te2r1j20dw0dwwfe.jpg" alt title="华硕 Radeon RX 560"></p>
+<h3 id="无线网卡"><a href="#无线网卡" class="headerlink" title="无线网卡"></a>无线网卡</h3><p>之所以要把无线网卡这一部分独立出来说明 是因为这个小部件能极大的提高整个 Hackintosh 的完整度<br>在讨论无线网卡的选择前 我们不妨来看看 MacOS 下的几个特殊功能</p>
+<ul>
+<li><strong>AirDrop</strong> (隔空投送)</li>
+<li><strong>Handoff</strong> (接力)</li>
+<li>使用 <strong>Magic Mouse</strong> 、 <strong>Magic Keyboard</strong> 、 <strong>Magic Trackpad</strong></li>
+</ul>
+<p>如果用过 MacOS 系统的人 大部分都会爱上前两个功能<br>对于第三点来说 在 Hackintosh 上享受 <strong>Magic Mouse</strong> 和 <strong>Magic Trackpad</strong><br>所带来的和原生手势体验 也是无比吸引人的</p>
+<p>除了上面三点以外 正常使用 <strong>AppStore</strong> <strong>iCloud 相关功能</strong> 也能让 Hackintosh<br>在软件部分达到近乎完美的效果 而这一切都与无线网卡的选择密切相关</p>
+<p>在主板选择时 我已经提到 现在很多小主板自带无线网卡模块 可谓非常方便实用 集成度也很高<br>但是我并不推荐购买这样功能齐全的小板 原因在于</p>
+<ul>
+<li>驱动不便 需要做很多额外的功课</li>
+<li>不能完美支持前文所述的多项功能</li>
+</ul>
+<p>那么应该怎么办呢? 这个时候不由得感谢伟大的某宝了!<br>读到这里你可以想想 什么才是最完美的无线网卡呢? 没错 我估计你猜到了!<br>就是从苹果官方的设备上面拆下来的无线网卡 😎<br>强大的某宝上 这样的无线网卡已经加上了转接卡和天线 让你在装机时可以方便的插在 PCI-E 卡槽中<br>更重要的是 使用这种无线网卡 在 MacOS 下直接是免驱的 并且能正常使用所有功能 是不是很酷!</p>
+<p>为避免广告嫌疑 我就分享两个不同宝贝的链接</p>
+<ul>
+<li><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.42.7596ad19Jc15oZ&amp;id=37593058461&amp;ns=1&amp;abbucket=10#detail" target="_blank" rel="noopener">NO.1 BCM94360</a></li>
+<li><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.216.7596ad19Jc15oZ&amp;id=42308294230&amp;ns=1&amp;abbucket=10#detail" target="_blank" rel="noopener">NO.2 BCM94360</a></li>
+</ul>
+<h3 id="笔记本特殊说明"><a href="#笔记本特殊说明" class="headerlink" title="笔记本特殊说明"></a>笔记本特殊说明</h3><p>针对笔记本来说 在硬件部分首先有下面两个值得注意的问题</p>
+<ul>
+<li><p>双显卡问题<br>  市面上绝大多数笔记本都存在 <strong>集成显卡</strong> 和 <strong>独立显卡</strong> 两个显卡 可以根据需要来回切换<br>  对于 Hackintosh 而言 大多数情况下 只能驱动其中一个显卡 而且大概率是 <strong>集成显卡</strong><br>  如果你的笔记本支持在 BIOS 中屏蔽集显并只开启独显的话 就有机会驱动 <strong>独立显卡</strong></p>
+</li>
+<li><p>无线网卡问题<br>  <strong>MacOS</strong> 只针对部分厂商生产的无线网卡提供了官方驱动<br>  如果碰巧你的笔记本用到了一个不被官方支持也没有第三方驱动的无线网卡 那么你将非常痛苦<br>  这时候怎么办呢? 还是得感谢伟大的某宝!<br>  因为你可以买到 Macbook Pro 同款的无线网卡 是不是特别 Geek 特别酷 😎<br>  唯一麻烦的地方 就是需要自己更换原来笔记本内部的无线网卡 </p>
+<p>  下面按惯例推荐两个卡</p>
+<ul>
+<li><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.36.4d4663dfnYduhX&amp;id=524391843184&amp;ns=1&amp;abbucket=10#detail" target="_blank" rel="noopener">No.1 BCM94352Z</a></li>
+<li><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.116.4d4663dfnYduhX&amp;id=549192120515&amp;ns=1&amp;abbucket=10#detail" target="_blank" rel="noopener">No.2 BCM94352Z</a></li>
+</ul>
+</li>
+</ul>
+<p>在笔记本 Hack 的时候 还会遇到很多不可避免的问题 如</p>
+<ul>
+<li>电池及电源管理驱动问题</li>
+<li>键盘及触控板驱动问题</li>
+<li>键盘背光及屏幕亮度问题</li>
+</ul>
+<p>这些内容都是笔记本在 Hack 时特有的问题 需要具体问题具体解决 难度比较大<br>并且不可避免的会涉及到 DSDT 相关的内容 这已经脱离这篇文章的初衷<br>我在这里分享一下前人总结的一些经典机型的 DSDT 文档 </p>
+<ul>
+<li><a href="https://github.com/RehabMan/Laptop-DSDT-Patch" target="_blank" rel="noopener">Laptop DSDT Patch</a></li>
+</ul>
+<p>准备对笔记本进行 Hack 的同好 建议去关注 <a href="https://github.com/RehabMan" target="_blank" rel="noopener">@Rehabman</a><br>这是一位在 Hackintosh 社区里 赫赫有名的人物</p>
+<h3 id="硬件部分总结"><a href="#硬件部分总结" class="headerlink" title="硬件部分总结"></a>硬件部分总结</h3><p>上面说了几个关键的硬件部分 在这里我总结下选配台式机时 我的推荐配置</p>
+<ul>
+<li>CPU: Intel i5 7500 (1599元) </li>
+<li>主板: Gigabyte B250M-D3H (699元)</li>
+<li>显卡: ASUS ROG STRIX EVO RX560 O4G GAMING (1299元)</li>
+<li>无线网卡: BCM94360 PCI-E (248元)</li>
+<li>硬盘: Samsung 970 EVO 250G NVMe M.2 (639元)</li>
+<li>内存: Crucial 2666 DDR4 8G (429元)</li>
+<li>CPU 散热: Cooler Master 冰神 B120I (259元)</li>
+<li>机箱: JONSBO U5 ATX (469元)</li>
+<li>合计: 5641元 </li>
+</ul>
+<p>配置中 <strong>CPU</strong> 部分和 <strong>显卡</strong> 部分都可以根据需要选择更高级的款式<br>硬盘方面 因为新主板支持 NVMe M.2 接口的 SSD 选择三星的 EVO 系列可以让系统运行无比丝滑<br>内存我个人比较喜欢 <strong>英睿达</strong> 这个牌子 这个部件是可以随便选择的 没有限制<br>CPU 散热和机箱 属于个人喜好方面的问题 我的推荐仅仅作为参考</p>
+<p>好了 到这里硬件部分就可以告一段了 等你买回这些硬件把机器组装好之后<br>就可以开始真真的攒一台炫酷的 Hackintosh 啦 🤘<br>软件相关的部分 可以查看我博客里面 <strong>Hackintosh 血泪史</strong> 的第二篇文章~</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-Hackintosh"><span class="toc-number">2.</span> <span class="toc-text">什么是 Hackintosh?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写在-Hack-之前"><span class="toc-number">3.</span> <span class="toc-text">写在 Hack 之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件部分"><span class="toc-number">4.</span> <span class="toc-text">硬件部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU"><span class="toc-number">4.1.</span> <span class="toc-text">CPU</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主板"><span class="toc-number">4.2.</span> <span class="toc-text">主板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显卡"><span class="toc-number">4.3.</span> <span class="toc-text">显卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无线网卡"><span class="toc-number">4.4.</span> <span class="toc-text">无线网卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记本特殊说明"><span class="toc-number">4.5.</span> <span class="toc-text">笔记本特殊说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬件部分总结"><span class="toc-number">4.6.</span> <span class="toc-text">硬件部分总结</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&text=Hackintosh-血泪史-1"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&is_video=false&description=Hackintosh-血泪史-1"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hackintosh-血泪史-1&body=Check out this article: https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&title=Hackintosh-血泪史-1"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-1/&name=Hackintosh-血泪史-1&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Unbelievable9
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-127419060-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7c1c1f2601a3bdc1117294299affcbdd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'https-www-unbelievable9-info';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+

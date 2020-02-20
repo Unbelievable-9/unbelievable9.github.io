@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="软件部分在 Hackintosh血泪史 的第一篇文章中, 我们已经耗费了很多精力去选配各种硬件接下来就是真刀真枪的 Hackintosh 之旅了对于 Hackintosh 的软件部分 主要就是两个步骤  安装系统 相关驱动完善  在 Hackintosh 的世界里 其实把 MacOS 系统装好 只是万事开头的第一步后续还有很多方面的事情需要操心 举一个简单的例子苹果官方发布了一个针对 MacOS">
+<meta name="keywords" content="Hackintosh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hackintosh-血泪史-2">
+<meta property="og:url" content="https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/index.html">
+<meta property="og:site_name" content="Unbelievable Notes">
+<meta property="og:description" content="软件部分在 Hackintosh血泪史 的第一篇文章中, 我们已经耗费了很多精力去选配各种硬件接下来就是真刀真枪的 Hackintosh 之旅了对于 Hackintosh 的软件部分 主要就是两个步骤  安装系统 相关驱动完善  在 Hackintosh 的世界里 其实把 MacOS 系统装好 只是万事开头的第一步后续还有很多方面的事情需要操心 举一个简单的例子苹果官方发布了一个针对 MacOS">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lbuatpbj20ik0d375d.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lajs18qj21fs0vegsl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lb2jstoj21fs0vetgx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lbfopt6j21fs0vejyt.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lc8s4usj21920xgn5m.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lcn68cqj21920xgwpf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8ldoh01gj20mj0gqdhh.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8ld1o6tmj21920xgqe9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8ldbcm7jj20mj0gqdi8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8le6igdxj20h20d475h.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lekt72wj20m80got9w.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8levw49hj20m80gotaj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lfb26s5j21eq156gwv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lfmux0uj21eq156gtj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lfzqc0zj21eq156gxg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lgb78lij21eq15611c.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lgu9ivzj21eq156n5s.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lh9jxd2j21hc0u0k3y.jpg">
+<meta property="og:updated_time" content="2020-02-20T08:17:49.598Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hackintosh-血泪史-2">
+<meta name="twitter:description" content="软件部分在 Hackintosh血泪史 的第一篇文章中, 我们已经耗费了很多精力去选配各种硬件接下来就是真刀真枪的 Hackintosh 之旅了对于 Hackintosh 的软件部分 主要就是两个步骤  安装系统 相关驱动完善  在 Hackintosh 的世界里 其实把 MacOS 系统装好 只是万事开头的第一步后续还有很多方面的事情需要操心 举一个简单的例子苹果官方发布了一个针对 MacOS">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/691bd373gy1fx8lbuatpbj20ik0d375d.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/aae957fff21d4cfa8c7ab6728a73c7f7?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Hackintosh-血泪史-2</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/10/23/Hackintosh-血泪史-1/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&text=Hackintosh-血泪史-2"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&is_video=false&description=Hackintosh-血泪史-2"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hackintosh-血泪史-2&body=Check out this article: https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&name=Hackintosh-血泪史-2&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件部分"><span class="toc-number">1.</span> <span class="toc-text">软件部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#写在开始之前"><span class="toc-number">1.1.</span> <span class="toc-text">写在开始之前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像制作"><span class="toc-number">1.2.</span> <span class="toc-text">镜像制作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装系统"><span class="toc-number">1.3.</span> <span class="toc-text">安装系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装后完善工作"><span class="toc-number">1.4.</span> <span class="toc-text">安装后完善工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NVIDIA-显卡单独说明"><span class="toc-number">1.5.</span> <span class="toc-text">NVIDIA 显卡单独说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-number">2.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Hackintosh-血泪史-2
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Unbelievable Notes</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2018-10-23T01:35:39.000Z" itemprop="datePublished">2018-10-23</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Hackintosh/">Hackintosh</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="软件部分"><a href="#软件部分" class="headerlink" title="软件部分"></a>软件部分</h2><p>在 <strong>Hackintosh血泪史</strong> 的第一篇文章中, 我们已经耗费了很多精力去选配各种硬件<br>接下来就是真刀真枪的 Hackintosh 之旅了<br>对于 Hackintosh 的软件部分 主要就是两个步骤</p>
+<ul>
+<li>安装系统</li>
+<li>相关驱动完善</li>
+</ul>
+<p>在 Hackintosh 的世界里 其实把 MacOS 系统装好 只是万事开头的第一步<br>后续还有很多方面的事情需要操心 举一个简单的例子<br>苹果官方发布了一个针对 MacOS 的大版本更新 比如最近的 High Sierra 到 Mojave<br>官方设备只需要 进入 AppStore -&gt; 选择更新 -&gt; 点击确定 -&gt; 等待重启安装 -&gt; 完成!<br>但对于 Hackintosh 而言 很有可能是这样</p>
+<ul>
+<li>利用工具 进行全盘备份 把备份放入移动硬盘中</li>
+<li>更新引导工具 Clover</li>
+<li>进入 AppStore -&gt; 选择更新 -&gt; 点击确定 -&gt; 等待重启安装</li>
+<li>无法进入系统 各种尝试都无果</li>
+<li>进入移动硬盘的备份 恢复备份到硬盘</li>
+<li>重新进入老版本的系统</li>
+<li>调查原因 发现是显卡驱动暂时还没有支持到最新版的 MacOS</li>
+<li>等待…</li>
+<li>官方宣布新显卡驱动推出</li>
+<li>重复上述 1-3 操作</li>
+</ul>
+<p>可以简单感受下两者的区别 Hackintosh 的世界里 折腾是无处不在的 上面这个例子只是冰山一角<br>在安装和完善的过程中 你一定会遇到各种各样的问题 而且常常你别如选择 只能重新开始<br>记得我在第一次 Hack 的时候 经常不知不觉 天就亮了 后知后觉 一天就过去了<br>无数次的推倒重来 无数次内心吐槽 我去 老子不玩儿了 太特么麻烦了! 😤<br>但这些都是一定会发生的 每台 Hackintosh 的都是呕心沥血的成果<br>当它最后完美的摆在你面前时 我相信你会觉得所有过程都是值得的!</p>
+<h3 id="写在开始之前"><a href="#写在开始之前" class="headerlink" title="写在开始之前"></a>写在开始之前</h3><p>在真正开始安装之前 需要做如下几点准备</p>
+<ul>
+<li>准备一台能运行 MacOS 操作系统的机器 苹果官方设备或者是已有的 Hackintosh 甚至是虚拟机都可以</li>
+<li>准备一个容量大于等于 16GB 的 U盘</li>
+</ul>
+<p>关于第一点 我想多说一下<br>在我刚进入 Hackintosh 的世界的时候 我会经常去逛 <a href="http://bbs.pcbeta.com/" target="_blank" rel="noopener">远景论坛</a><br>这个论坛是当时最大的 Hackintosh 中文社区 里面有一些很专业的 Hackintosh 玩家会写指导类的帖子<br>但是这个论坛里充斥着太多的小白伸手党 还有很多野路子 土办法<br>在这里 我第一次遇到了 <strong>xxx懒人版镜像</strong> 以及各种野路子制作安装镜像的办法<br>当然呢 并不是说这些内容不好 它们也是有效的方式<br>但是我希望我写的这篇文章 能给想要折腾 Hackintosh 的朋友们<br>一个 <strong>系统的</strong> <strong>普适性的</strong> <strong>最有效的</strong> <strong>省去不必要麻烦的</strong> 说明性文档</p>
+<p>好 不废话了 我们进入正题</p>
+<h3 id="镜像制作"><a href="#镜像制作" class="headerlink" title="镜像制作"></a>镜像制作</h3><p>在制作镜像之前 我先说明一下我们的安装环境及目标 </p>
+<ul>
+<li>一块 SSD 专门用来安装 MacOS 系统 我们不会在上面再安装其他操作系统</li>
+<li>如果你希望安装其他操作系统 最好重新购买一块硬盘</li>
+<li>本次我们尝试安装 MacOS High Sierra (10.13) 而并不是最新的 Mojave</li>
+</ul>
+<p>这样做的原因是为了减少因为 UEFI 引导而产生的不必要的麻烦<br>如果实在想在一张硬盘上装多个系统 我可以在将来更新相关的文章</p>
+<p>接下来打开我们事先准备好的 运行着 <strong>MacOS</strong> 操作系统的机器<br>进入 <strong>AppStore</strong> 下载 <strong>MacOS High Sierra</strong><br>在下载的同时 我们可以去下载后续需要用到的两个工具软件</p>
+<ul>
+<li><a href="http://www.pc6.com/mac/568963.html" target="_blank" rel="noopener">UniBeast 8.3.2</a></li>
+<li><a href="http://www.pc6.com/mac/135263.html" target="_blank" rel="noopener">MultiBeast 10.4.0</a></li>
+</ul>
+<p>这两个工具软件都来自一个国外非常著名的 Hackintosh 论坛 <a href="https://www.tonymacx86.com" target="_blank" rel="noopener">tonymacx86</a></p>
+<ul>
+<li><strong>UniBeast</strong> 是自动化制作 U盘 安装镜像的工具</li>
+<li><strong>MultiBeast</strong> 是在安装完成后 用来完善相关配置的工具</li>
+</ul>
+<p>对于这个论坛我想多说一下 近期所有 Hackintosh 的新闻 我基本都是从这里获取的<br>但是这个是一个纯英文的论坛 对国人而言在阅读上不太友好<br>英文基础不错的玩家 我认为都应该去这里注册一个账号 随时关注 Hackintosh 社区的新闻</p>
+<p>当然对于各种制作方式的争论 一直都没有停过<br>有的人更喜欢 一步一步自己制作安装镜像<br>有人的更推崇 <strong>UniBeast</strong> 这样的自动化工具<br>在我看来 根据 <strong>最有效的</strong> 原则 使用这个工具是最好的<br>在我多次使用后发现 这个工具非常方便和稳定 可以帮我们规避很多不必要的麻烦<br>与此同时 在另一个角度让我们可以更专注的去解决系统安装完成后的各种问题</p>
+<p>好了 需要准备的东西已经介绍的差不多了 当我们都把这些东西都下载好之后 请按照如下方式进行操作</p>
+<ul>
+<li><p>临时设置系统语言为英文<br>  制作U盘安装镜像时 需要用到英文语言环境 我们先进行这一步设置</p>
+<ul>
+<li>打开 <strong>系统偏好设置</strong> -&gt; 进入 <strong>语言与地区</strong> -&gt; 修改首选语言为 <strong>英文</strong> —&gt; <strong>重启</strong><br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lbuatpbj20ik0d375d.jpg" alt title="修改系统语言为英文"></li>
+</ul>
+</li>
+<li><p>格式化 U盘<br>  在 MacOS 中格式化 U盘 需要用到系统自带的 <strong>Disk Utility (磁盘工具)</strong><br>  具体方式如下</p>
+<ul>
+<li><p>打开 <strong>Disk Utility</strong> (可以利用右上角放大镜 🔍 进行查找) -&gt; 在左侧找到U盘<br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lajs18qj21fs0vegsl.jpg" alt title="磁盘工具"></p>
+</li>
+<li><p>选中U盘后点击 <strong>Erase (抹掉)</strong> -&gt; 请按照下进行设置 —&gt; 完成设置后单击 <strong>Erase</strong><br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lb2jstoj21fs0vetgx.jpg" alt title="抹掉"></p>
+</li>
+<li><p>抹掉成功过会有如下图提示 点击 <strong>Done</strong> 完成U盘准备工作<br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lbfopt6j21fs0vejyt.jpg" alt title="抹掉U盘成功"></p>
+</li>
+</ul>
+</li>
+<li><p>利用 UniBeast 制作安装U盘<br>  注意 如果系统目前不是英文语言环境 那么是无法打开 UniBeast 的 请再次确认系统语言环境</p>
+<ul>
+<li><p>打开 UniBeast -&gt; 一路 <strong>Contiune</strong> -&gt; 选中之前准备好的 <strong>U盘</strong> (如下图) -&gt; <strong>Continue</strong><br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lc8s4usj21920xgn5m.jpg" alt title="目标介质选择"></p>
+</li>
+<li><p>选择启动方式 -&gt; 选择 <strong>UEFI Boot Mode</strong> -&gt; <strong>Continue</strong><br>  关于这里我想多说一下关于启动方式的问题 这个选项主要取决于你的主板<br>  目前最新的主板是300系列 匹配的8代 Intel CPU<br>  相应的还有 200/100/9/8/7/6/5 等系列的主板 每一个系列的主板匹配的 CPU 也不同<br>  总体来说 从7系列开始及以后的主板 都推荐使用 <strong>UEFI Boot Mode</strong> 模式<br>  这也是现在大多数设备采用的启动模式 苹果是最早开始使用这种模式的厂商<br>  低于7系列的主板 比如老的 6/5 系列的主板则推荐使用 <strong>Legacy Boot Mode</strong> 模式<br>  但是现在已经2018年了 如果你手里还在使用 6/5 甚至更早系列的主板和对应的 CPU<br>  我的建议是 整体升级下主板和 CPU 以获得更好的体验</p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lcn68cqj21920xgwpf.jpg" alt title="启动方式选择"></p>
+</li>
+<li><p>显卡驱动设置 -&gt; 不勾选 -&gt; <strong>Continue</strong><br>  这部分主要针对一些 <strong>NVIDIA</strong> 和 <strong>AMD</strong> 的老显卡进行简单的驱动<br>  被支持的老显卡型号可以在下图中看到 如果你是根据我的推荐选择的 <strong>AMD Radeon</strong> 新显卡<br>  或者是 <strong>NVIDIA</strong> 系列的新显卡 这里都不需要选中 </p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8ldoh01gj20mj0gqdhh.jpg" alt title="显卡驱动选择"></p>
+</li>
+<li><p>安装选项验证 -&gt; 参考下图 至少有下面三个图标 -&gt; <strong>Continue</strong><br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8ld1o6tmj21920xgqe9.jpg" alt title="安装选项验证"></p>
+</li>
+<li><p>制作安装U盘<br>  这里 UniBeast 就开始制作系统安装U盘了<br>  官方说明中提到 这个过程大概需要 <strong>10分钟</strong> 左右<br>  但在我多次实践中 这个时间跟制作时所使用的机器有很大的关系<br>  比如你使用的是一台2010年以前的 Macbook Pro 那可能需要接近 <strong>20分钟</strong> 的样子<br>  总之这一步需要的 就是耐心 新鲜的系统安装U盘马上就要出炉了 🔥</p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8ldbcm7jj20mj0gqdi8.jpg" alt title="安装U盘制作"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><p>系统安装U盘制作好之后 接下来就是安装了 在安装之前最重要的就是对主板进行设置<br>因为主板制造厂商的 BIOS 各式各样 在这篇文章里 也无法对每一种 BIOS 的设置进行说明<br>这里我也就借鉴 <strong>tonymacx86</strong> 官方的指导 并配合我的实际经历进行说明</p>
+<ul>
+<li>无论什么主板 首先读取主板默认设置 英文关字为 <strong>Load Optimized Defaults</strong></li>
+<li>如果你选配的 Intel CPU 支持虚拟化技术 请在主板中禁用 英文关键字为 <strong>VT-d</strong></li>
+<li>如果你选配的主板中有 <strong>CFG-Lock</strong> 相关设置 请禁用</li>
+<li>如果你选配的主板中有 <strong>安全引导模式</strong> 相关设置 请禁用 英文关键字为 <strong>Secure Boot Mode</strong></li>
+<li>如果你选配的主板中有 <strong>IO串口</strong> 相关设置 请禁用 英文关键字为 <strong>IO Serial Port</strong></li>
+<li>如果你选配了 <strong>独立显卡</strong> 请在主板的设置中禁用 <strong>集成显卡</strong></li>
+<li>在选配的主板中设置 <strong>操作系统类型</strong> 为 <strong>其他操作系统</strong> 英文关键字为 <strong>OS Type</strong> 设置为 <strong>Other OS</strong></li>
+<li>在选配的主板中设置 <strong>USB接口设置</strong> 为由操作系统驱动 英文关键字为 <strong>XHCI Handoff</strong> 设置为 <strong>Enabled</strong></li>
+<li>在选配的主板中设置 <strong>硬盘模式</strong> 为 <strong>AHCI</strong> 英文关键字为 <strong>SATA Mode</strong></li>
+<li>在选配的主板中设置启动顺序 <strong>将U盘启动放在第一位</strong></li>
+</ul>
+<p>CPU 是否支持虚拟化技术 可以去 <a href="https://ark.intel.com/" target="_blank" rel="noopener">Intel 官网</a> 查询 大部分主流的 Intel CPU 都支持<br>对于上述几点设置 如果你选配的主板里 并没有找到对应的设置 直接忽略即可 设置好主板后切记保存<br>接下来要做的就是插上之前烧好的 <strong>系统安装U盘</strong> 并启动主机<br>一切顺利的话 你会看到一个类似下图的引导界面</p>
+<p><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8le6igdxj20h20d475h.jpg" alt title="Clover 引导界面"></p>
+<p>如果你的机器里有其他分区 也会显示这里 在安装时 我们需要选则</p>
+<ul>
+<li>有 <strong>External</strong> 标识的分区</li>
+<li>且名称为 <strong>Boot OS X Install from Install macOS High Sierra</strong></li>
+</ul>
+<p>单机回车即开始进入系统安装界面 这部分我想多说几句<br>在这一步的时候 很有可能你尝试多次都进不去安装界面<br>这时候可以利用 Clover 引导中的调试模式去启动 并查看错误信息<br><strong>Clover</strong> 目前在 Hackintosh 世界里是最为流行的 <strong>系统引导工具</strong><br>一台完美的 Hackintosh 机器 Clover 是必不可少的工具<br>在这篇文章中 我就不过多的去讨论 Clover 相关的内容<br>在这里就简单介绍下 如何利用 Clover 的调试模式 去打印日志信息并查找错误</p>
+<ul>
+<li>重启机器进入 Clover 引导界面</li>
+<li>选中系统安装分区 单击 <strong>空格键</strong></li>
+<li>在出现的选项中 勾选 <strong>verbose</strong></li>
+<li>再尝试启动</li>
+</ul>
+<p>使用调试模式启动时 显示器上会打印很多日志信息 可以根据打印的日志去寻找错误信息<br>因为在这一步时 会出现各种各样的错误信息 篇幅所限 我也无法一一把错误列举出来<br>如果你是按照我的推荐选择的硬件设备 并且设置都正确的话 大概率是可以顺利进入安装界面的</p>
+<p>但是在其他情况 比如将来的系统升级时 肯定都会遇到无法启动的问题 这就需要去揪出错误信息了<br>对于玩儿 Hackintosh 来说 应该是一项必备的技能 在这里我就不多讲了<br>有时间的话 我会写一篇类似 <strong>Clover 简易使用指南</strong> 这样的文章去介绍这些技能<br>如果你实在觉得无法解决 可以尝试给我发邮件 我会尽可能热心的提供帮助</p>
+<p>好 假如你现在非常幸运的进入了安装界面 那么恭喜你 你的半只脚已经踏入了 Hackintosh 的世界<br>接线来就是把系统安装到机器的硬盘中 分别有下面一些步骤 比较容易</p>
+<ul>
+<li>根据喜好选择系统语言 下面以 <strong>英文</strong> 为例</li>
+<li>选择 <strong>Disk Utility (磁盘工具)</strong><br>  <img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lekt72wj20m80got9w.jpg" alt title="磁盘工具"></li>
+<li>在左侧找到 <strong>你机器中的硬盘</strong> 注意 <strong>不是安装用的U盘</strong> 点击 <strong>Erase (抹掉)</strong> </li>
+<li>按下图中进行设置 <strong>Name</strong> 推荐填写 <strong>Macintosh HD</strong> 然后 <strong>Erase (抹掉)</strong><br>  <img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8levw49hj20m80gotaj.jpg" alt title="格式化设置"></li>
+<li>完成后单击左上角 <strong>Disk Utility (磁盘工具)</strong> 选择 <strong>退出</strong></li>
+</ul>
+<p>现在我们用来安装系统的硬盘 已经准备好了 接下来就是正式安装系统了<br>回到最开始进入的页面 </p>
+<ul>
+<li>选择 <strong>Reinstall macOS (重新安装 macOS)</strong></li>
+<li>一路 <strong>Agree</strong> 直到选择安装磁盘部分 </li>
+<li>切记选择 <strong>你机器中的分区</strong> 如果你按照我的推荐 它应该叫 <strong>Macintosh HD</strong></li>
+<li>继续下一步 </li>
+</ul>
+<p>这时系统安装工作正式开始 你可以泡杯茶 抽根烟 耐心等待安装进行 🍵 </p>
+<h3 id="安装后完善工作"><a href="#安装后完善工作" class="headerlink" title="安装后完善工作"></a>安装后完善工作</h3><p>系统安装完成后会自动重启机器 这时候还是需要通过U盘启动进入到 Clover 引导页面<br>不同的是 这时候你应该会看到一个</p>
+<ul>
+<li>名为 <strong>Boot OS X from Macintosh HD</strong> 的分区</li>
+<li>同时该分区的标识应该为 <strong>Internal</strong></li>
+</ul>
+<p>这时候直接回车进入系统 如果你完全按照我的推荐进行操作 你大概率能成功进入系统<br>和进入系统安装界面时一样 在这一步 你也很有可能会无法进入系统<br>不要惊慌 不要失措 尝试去用之前调试启动的方法 去网络上查找错误的解决办法<br>还是那句话 如果实在让你很头疼 你可以通过邮件联系我</p>
+<p>在进行一些简单的设置后 你最终会看到久违的 MacOS High Sierra 桌面<br>欢迎进入的 Hackintosh 的世界 💥 </p>
+<p>到这里的时候 你可以到处点点 暗中观察一下 可以先从这些方面开始</p>
+<ul>
+<li>先检查一下 <strong>WiFi</strong> <strong>蓝牙</strong> 功能 是否正常</li>
+<li>如果你使用的是 <strong>NVDIA</strong> 较新款的显卡 你应该会发现电脑特别卡 桌面刷新会有严重问题</li>
+<li>如果你使用的是我推荐的 <strong>AMD Radeon</strong> 较新款的显卡 你应该会发现一切都无比丝滑</li>
+<li>插上鼠标 键盘试试 看看各个 USB 口是否都工作正常</li>
+<li>插上耳机试试 看看声卡是否正常工作 大概率不正常</li>
+<li>插上网线试试网口是否正常工作</li>
+</ul>
+<p>检查完上述几个项目之后 我相信应该或多或少都会有一些问题 这时候就到了完善 Hackintosh 的时候了<br>首先需要找出之前准备好的 <strong>MultiBeast</strong> 工具 利用U盘或其他办法把它拷贝到新系统中</p>
+<p>在进行完善之前 我想解释下目前的状况<br>在前面我提到过 一台完美的 Hackintosh 一定会用到 Clover 这个系统引导工具<br>那我们目前是什么样的呢? </p>
+<p>其实我们是利用 <strong>UniBeast</strong> 为我们做好的系统安装U盘里的 Clover 进行引导 然后顺利进入了安装在机器硬盘中的系统</p>
+<p>想象一下 如果我们重启计算机 拔掉了U盘 那这时候 Clover 消失了 系统也没法进入了 怎么办 🤣<br>是不是可以在机器中的硬盘上也安装上 Clover 这样就可以彻底脱离U盘独立引导了?<br>答案是肯定的! <strong>MultiBeast</strong> 就可以帮我们完成这件事情!</p>
+<p>其次因为 <strong>MacOS</strong> 系统的对 USB 接口数量有限制 在安装完成后很有可能主机的有些 USB 接口无法使用<br>是不是很难受 比如你主机正前方的 USB 3.0 接口不能用 是不是很心碎 💔<br>没关系 <strong>MultiBeast</strong> 可以帮你解决这个问题!</p>
+<p>再有就是声卡的问题 全新安装之后 因为 <strong>MacOS</strong> 系统只支持很少一部分的声卡 大概率你的声卡不被原生支持<br>那这个时候 你有一个特别牛逼的耳机 想插上试试它在 Hackintosh 下的表现如何<br>但是当你插上之后 什么声音都没有 是不是很苦恼 是不是再次心碎 💔<br>没关系 还是<strong>MultiBeast</strong> 它你能拯救你!<br>找到之前记录的主板型号 并查询对应的板载声卡型号 在 <strong>MutilBeast</strong> 里有会有它的救命稻草</p>
+<p>另外针对 <strong>NVIDIA</strong> 系列的新显卡 在第一次进入系统后 所有图形界面相关的内容 都会无比卡顿<br>比如你花了大价钱买了一块牛逼的 1080TI 结果…结果… 居然能给我卡成这个鸟样？<br>你是不是彻底崩溃了 心碎了 不爱了 💔<br>没关系 <strong>MultiBeast</strong> 也可以稍微拉你一把 但是靠它还不够!</p>
+<p>是不是心里又咯噔了一下? 好了 我觉得我就不继续演了 办法是有的 我会在最后说明这个问题 😎</p>
+<p>说了这么多 这个 <strong>MultiBeast</strong> 这么牛逼 那就打开试试<br>其实我个人感觉 这个东西就类似于 Hackintosh 世界里的 <strong>简易版驱动精灵</strong><br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lfb26s5j21eq156gwv.jpg" alt title="Hackintosh 版驱动精灵"></p>
+<p>首先点击左上方的 <strong>Quick Start</strong> 开始进行完善工作</p>
+<ul>
+<li><p>选择启动引导模式<br>  在这里其实就是告诉 <strong>MultiBeast</strong> 要安装什么类型的 Clover 引导 以及使用哪些默认选型<br>  这里我们选择 <strong>UEFI Boot Mode</strong><br>  <img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lfmux0uj21eq156gtj.jpg" alt title="启动引导选择"></p>
+</li>
+<li><p>选择上方的 <strong>Driver</strong><br>  可以看到 这里有针对 <strong>声卡</strong> <strong>硬盘</strong> <strong>有线网口</strong> <strong>USB接口</strong> 以及 <strong>其他</strong> 内容的相关完善<br>  <img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lfzqc0zj21eq156gxg.jpg" alt title="驱动完善"></p>
+<ul>
+<li><strong>Audio</strong><br>  大部分声卡可以在 <strong>Realtek ALCxxx</strong> 下面找到 请勾选你的型号<br>  如果在列表中没有你的型号 你可以尝试在 <strong>Universal</strong> 里勾选 <strong>VoodooHDA</strong> 较新版本的声卡通用驱动</li>
+<li><strong>Disk</strong><br>  这部分的内容基本不需要 除非你用的是非主流的硬盘</li>
+<li><strong>Misc</strong><br>  这里面最重要的是请确保选中 <strong>FakeSMC</strong> 这是一个生产苹果设备信息的工具 其他内容暂时不用</li>
+<li><strong>Network</strong><br>  如果你的有线网口无法使用 可以在这里寻找到对应的驱动 请找到你的有线网卡型号并勾选</li>
+<li><strong>USB</strong><br>  如果你的USB接口有部分不能使用 可以尝试勾选 <strong>Remove XHCI USB Port Limit</strong></li>
+</ul>
+</li>
+<li><p>选择上方的 <strong>Bootloader</strong><br>  确认选中的是 <strong>Clover UEFI Boot Mode</strong></p>
+</li>
+<li><p>选择上方的 <strong>Customize</strong><br>  这部分里有一些重要的完善选项<br>  <img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lgb78lij21eq15611c.jpg" alt title="其他完善选项"></p>
+<ul>
+<li><strong>Graphics Configuration</strong><br>  如果你使用 <strong>Intel HD6xx</strong> 的 <strong>集成显卡</strong> 可以勾选 <strong>Intel HD 6xx</strong><br>  如果你使用的是 <strong>ATI Radeon 4xxx</strong> 的老版显卡 可以勾选 <strong>Inject ATI</strong><br>  如果你使用的是 <strong>NVIDIA</strong> 系列早于 <strong>GT630</strong> 的一些显卡 可以勾选<strong>Inject NVIDIA</strong><br>  如果你使用的是 <strong>NVIDIA</strong> 系列 <strong>GTX 7xx</strong> 之后的显卡 请勾选 <strong>NVDIA WebDrivers Boot Flag</strong><br>  如果你使用的是 <strong>AMD Radeon</strong> 较新系列的显卡 例如本文推荐的 <strong>RX 560</strong> 什么都不用选 免驱!</li>
+<li><strong>SSDT Options</strong><br>  这部分是针对 <strong>Sandy Bridge</strong> 架构的 Intel CPU(酷睿2代) 的一些补充 SSDT 文件<br>  如果使用的不是这个架构的 请忽略</li>
+<li><strong>System Definitions</strong><br>  这部分内容比较重要 一台 Hackintosh 设备一定会对应某一个苹果官方设备<br>  在这里 你需要根据自己机器的配置 去找到配置最为接近的苹果官方设备<br>  查询苹果官方配置的详细时 我推荐去 <a href="https://everymac.com" target="_blank" rel="noopener">everymac</a> 这个网站查询<br>  比如对于我在前面给出的推荐配置 最接近的配置应该是 <strong>iMac 18,3</strong><br>  找到最接近的机型 选中即可</li>
+</ul>
+</li>
+<li><p>最后选择上方的 <strong>Build</strong><br>  在这里会显示 所有你需要的完善内容 注意右侧一定要选择 <strong>自己机器内部的磁盘分区</strong><br>  确认无误后 请点击又下角 <strong>Install</strong><br>  <img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lgu9ivzj21eq156n5s.jpg" alt title="确认并安装"></p>
+</li>
+</ul>
+<p>到这里 <strong>MultiBeast</strong> 的使命已经结束 可以关闭机器 拔掉U盘 尝试进入系统吧<br>对于 <strong>NVIDIA</strong> 新版显卡的用户 还需要安装第三方驱动 请继续阅读 🧐</p>
+<h3 id="NVIDIA-显卡单独说明"><a href="#NVIDIA-显卡单独说明" class="headerlink" title="NVIDIA 显卡单独说明"></a>NVIDIA 显卡单独说明</h3><p>由于 <strong>苹果</strong> 和 <strong>英伟达</strong> 这两个公司的关系 N卡在 MacOS 上的表现很大程度上 依赖于英伟达自身开发的驱动<br>所以在每一次 <strong>MacOS</strong> 系统更新的时候 N卡的用户都只能焦急的等待英伟达同步升级驱动<br>这也是为什么我写这篇文章的时候 没有选择最新的 <strong>MacOS Majove</strong> 作为目标版本<br>为什么呢? 就是因为英伟达针对最新版本 MacOS 的驱动还没有更新 😑</p>
+<p>好了 简单介绍一下背景之后 我就直接提供一下获取驱动的途径吧<br>通常我是通过关注 <a href="https://www.tonymacx86.com/nvidia-drivers/" target="_blank" rel="noopener">N卡驱动列表</a> 这里 来查看最新的驱动<br>在选择驱动时需要注意一点 <strong>驱动对应的系统版本号 要与你使用的系统版本号完全相同</strong><br>比如现在最新的 MacOS High Sierra 版本号是 <strong>10.13.6</strong> 那么对应的N卡驱动就应该是 <strong>387.10.10.10.40.105</strong></p>
+<p>之后安装驱动 我这里就不必多说了 安装好后重启系统 丝滑的体验正在等着你 ✌️</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>不知不觉写了一篇这么长的 Hackintosh 文章 感慨良多</p>
+<p>在书写的过程中 多次想起那些 大二大三的深夜 对着自己的非主流笔记本 一坐就是一天的日子<br>最后那台笔记本也没有变成一台成功的 Hackintosh Laptop 反倒是因为电源管理 和 CPU 变频的问题<br>最终 <strong>英勇就义</strong> 我连它那被烧掉的心脏都没有找回来 想想还是一阵唏嘘 😤</p>
+<p>工作以后 第一次用自己的年终奖 攒了一台心仪的主机 硬件选配2个月 Hack 及完善前后1一个月<br>这台机器陪伴我从成都到北京 北京又到深圳 已经像一个老友一样离不开了</p>
+<p>很多人都会问 你认真存几个月钱 买台高配的 Macbook Pro 就完了 干嘛费这么大劲去鼓捣黑苹果<br>而且还不是那么稳定 更新又麻烦 能不能专注到软件开发本身上!</p>
+<p>其实呢 我回答不了这个问题 面对着顶配的 Macbook Pro 2018 无论是13寸 还是15寸 谁不会心动呢<br>但是不管它再好 我还是觉得 一起陪我走过这些日日夜夜的 <strong>圈羊一号机</strong> 更可爱~<br><img src="https://ws1.sinaimg.cn/large/691bd373gy1fx8lh9jxd2j21hc0u0k3y.jpg" alt title="圈羊一号机"></p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#软件部分"><span class="toc-number">1.</span> <span class="toc-text">软件部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#写在开始之前"><span class="toc-number">1.1.</span> <span class="toc-text">写在开始之前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#镜像制作"><span class="toc-number">1.2.</span> <span class="toc-text">镜像制作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装系统"><span class="toc-number">1.3.</span> <span class="toc-text">安装系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装后完善工作"><span class="toc-number">1.4.</span> <span class="toc-text">安装后完善工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NVIDIA-显卡单独说明"><span class="toc-number">1.5.</span> <span class="toc-text">NVIDIA 显卡单独说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-number">2.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&text=Hackintosh-血泪史-2"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&is_video=false&description=Hackintosh-血泪史-2"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hackintosh-血泪史-2&body=Check out this article: https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&title=Hackintosh-血泪史-2"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2018/10/23/Hackintosh-血泪史-2/&name=Hackintosh-血泪史-2&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Unbelievable9
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://joeasir.github.io/">老铁</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-127419060-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7c1c1f2601a3bdc1117294299affcbdd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'https-www-unbelievable9-info';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
