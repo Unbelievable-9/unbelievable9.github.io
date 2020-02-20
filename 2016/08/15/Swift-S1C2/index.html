@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html lang=en>
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://unbelievable9.info/2016/08/15/Swift-S1C2/index.html">
 <meta property="og:site_name" content="Unbelievable Notes">
 <meta property="og:description" content="读书笔记 Float 和 Double 在 Swift 中的使用 A Float takes up less memory than a Double but generally, memory use for numbers isn&amp;#39;t a huge issue and you&amp;#39;ll see Double used in most places.感觉以前撸代码的时候，没事就喜欢用">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://ooo.0o0.ooo/2016/12/16/5853aa76e1566.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2016/12/16/5853aa770609b.png">
 <meta property="og:updated_time" content="2020-02-20T08:17:49.599Z">
@@ -62,13 +62,13 @@
     <span id="nav">
       <ul>
          
-          <li><a href="/">首页</a></li>
+          <li><a href="/">Home</a></li>
          
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="/about/">关于</a></li>
+          <li><a href="/about/">About</a></li>
          
-          <li><a href="https://joeasir.github.io/">老铁</a></li>
+          <li><a href="https://joeasir.github.io/">Bro</a></li>
         
       </ul>
     </span>
@@ -84,10 +84,10 @@
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
     <br/>
     <div id="share" style="display: none">
@@ -104,6 +104,7 @@
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2016/08/15/Swift-S1C2/&name=Swift-S1C2&description=&lt;h2 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#读书笔记&#34; class=&#34;headerlink&#34; title=&#34;读书笔记&#34;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Float 和 Double 在 Swift 中的使用&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;A Float takes up less memory than a Double but generally, memory use for numbers isn&amp;#39;t a huge issue and you&amp;#39;ll see Double used in most places.&lt;/code&gt;&lt;br&gt;感觉以前撸代码的时候，没事就喜欢用 Float，但是马特大神说了，其实 Double 一下没关系的。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://unbelievable9.info/2016/08/15/Swift-S1C2/&t=Swift-S1C2"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -214,7 +215,7 @@
 
     <div class="blog-post-comments">
         <div id="disqus_thread">
-            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
         </div>
     </div>
 
@@ -227,13 +228,13 @@
     <div id="nav-footer" style="display: none">
       <ul>
          
-          <li><a href="/">首页</a></li>
+          <li><a href="/">Home</a></li>
          
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="/about/">关于</a></li>
+          <li><a href="/about/">About</a></li>
          
-          <li><a href="https://joeasir.github.io/">老铁</a></li>
+          <li><a href="https://joeasir.github.io/">Bro</a></li>
         
       </ul>
     </div>
@@ -256,15 +257,16 @@
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2016/08/15/Swift-S1C2/&name=Swift-S1C2&description=&lt;h2 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#读书笔记&#34; class=&#34;headerlink&#34; title=&#34;读书笔记&#34;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Float 和 Double 在 Swift 中的使用&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;A Float takes up less memory than a Double but generally, memory use for numbers isn&amp;#39;t a huge issue and you&amp;#39;ll see Double used in most places.&lt;/code&gt;&lt;br&gt;感觉以前撸代码的时候，没事就喜欢用 Float，但是马特大神说了，其实 Double 一下没关系的。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://unbelievable9.info/2016/08/15/Swift-S1C2/&t=Swift-S1C2"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
     </div>
 
   </div>
@@ -279,13 +281,13 @@
     <nav>
       <ul>
          
-          <li><a href="/">首页</a></li>
+          <li><a href="/">Home</a></li>
          
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="/about/">关于</a></li>
+          <li><a href="/about/">About</a></li>
          
-          <li><a href="https://joeasir.github.io/">老铁</a></li>
+          <li><a href="https://joeasir.github.io/">Bro</a></li>
         
       </ul>
     </nav>
@@ -293,15 +295,36 @@
 </footer>
 
     </div>
-</body>
-</html>
-<!-- styles -->
+    <!-- styles -->
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
-<!-- jquery -->
+    <!-- jquery -->
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
 <script src="/js/main.js"></script>
 <!-- search -->
 
@@ -343,3 +366,5 @@
     </script>
 
 
+</body>
+</html>

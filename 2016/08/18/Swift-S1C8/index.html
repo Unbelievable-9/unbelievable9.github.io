@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html lang=en>
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://unbelievable9.info/2016/08/18/Swift-S1C8/index.html">
 <meta property="og:site_name" content="Unbelievable Notes">
 <meta property="og:description" content="读书笔记关于 闭包 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 匿名函数 的翻译才让我茅塞顿开。 那么 闭包 作为中文，应该怎么理解呢？">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2020-02-20T08:17:49.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift-S1C8">
@@ -59,13 +59,13 @@
     <span id="nav">
       <ul>
          
-          <li><a href="/">首页</a></li>
+          <li><a href="/">Home</a></li>
          
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="/about/">关于</a></li>
+          <li><a href="/about/">About</a></li>
          
-          <li><a href="https://joeasir.github.io/">老铁</a></li>
+          <li><a href="https://joeasir.github.io/">Bro</a></li>
         
       </ul>
     </span>
@@ -81,10 +81,10 @@
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
     <br/>
     <div id="share" style="display: none">
@@ -100,6 +100,7 @@
   <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&name=Swift-S1C8&description=&lt;h2 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#读书笔记&#34; class=&#34;headerlink&#34; title=&#34;读书笔记&#34;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;p&gt;关于 &lt;strong&gt;闭包&lt;/strong&gt; 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 &lt;strong&gt;匿名函数&lt;/strong&gt; 的翻译才让我茅塞顿开。&lt;/p&gt;
 &lt;p&gt;那么 &lt;strong&gt;闭包&lt;/strong&gt; 作为中文，应该怎么理解呢？&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://unbelievable9.info/2016/08/18/Swift-S1C8/&t=Swift-S1C8"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -190,7 +191,7 @@
 
     <div class="blog-post-comments">
         <div id="disqus_thread">
-            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
         </div>
     </div>
 
@@ -203,13 +204,13 @@
     <div id="nav-footer" style="display: none">
       <ul>
          
-          <li><a href="/">首页</a></li>
+          <li><a href="/">Home</a></li>
          
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="/about/">关于</a></li>
+          <li><a href="/about/">About</a></li>
          
-          <li><a href="https://joeasir.github.io/">老铁</a></li>
+          <li><a href="https://joeasir.github.io/">Bro</a></li>
         
       </ul>
     </div>
@@ -231,15 +232,16 @@
   <li><a class="icon" href="http://digg.com/submit?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&title=Swift-S1C8"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://unbelievable9.info/2016/08/18/Swift-S1C8/&name=Swift-S1C8&description=&lt;h2 id=&#34;读书笔记&#34;&gt;&lt;a href=&#34;#读书笔记&#34; class=&#34;headerlink&#34; title=&#34;读书笔记&#34;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;p&gt;关于 &lt;strong&gt;闭包&lt;/strong&gt; 这个词，第一次在看到的时候，只感觉非常头晕，完全体会不到这个中文翻译的精髓在哪里。想当初，在刚看到 Objective-C 中 Block 用法时，也是同样的心情，直到后来一个 &lt;strong&gt;匿名函数&lt;/strong&gt; 的翻译才让我茅塞顿开。&lt;/p&gt;
 &lt;p&gt;那么 &lt;strong&gt;闭包&lt;/strong&gt; 作为中文，应该怎么理解呢？&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://unbelievable9.info/2016/08/18/Swift-S1C8/&t=Swift-S1C8"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
     </div>
 
   </div>
@@ -254,13 +256,13 @@
     <nav>
       <ul>
          
-          <li><a href="/">首页</a></li>
+          <li><a href="/">Home</a></li>
          
-          <li><a href="/archives/">归档</a></li>
+          <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="/about/">关于</a></li>
+          <li><a href="/about/">About</a></li>
          
-          <li><a href="https://joeasir.github.io/">老铁</a></li>
+          <li><a href="https://joeasir.github.io/">Bro</a></li>
         
       </ul>
     </nav>
@@ -268,15 +270,36 @@
 </footer>
 
     </div>
-</body>
-</html>
-<!-- styles -->
+    <!-- styles -->
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
-<!-- jquery -->
+    <!-- jquery -->
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
 <script src="/js/main.js"></script>
 <!-- search -->
 
@@ -318,3 +341,5 @@
     </script>
 
 
+</body>
+</html>
