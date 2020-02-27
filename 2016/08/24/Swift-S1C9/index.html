@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Unbelievable Notes">
 <meta property="og:description" content="读书笔记这章就是传说中的 迷之问号 ？感叹号 ！ 😂 😂 😂">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-20T08:17:49.600Z">
+<meta property="og:updated_time" content="2020-02-27T10:41:47.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift-S1C9">
 <meta name="twitter:description" content="读书笔记这章就是传说中的 迷之问号 ？感叹号 ！ 😂 😂 😂">
@@ -173,8 +173,9 @@
 <p>关于 Force Unwrapping (直接使用 ！)，马特大神用了一个特别贴切的词语 <strong>sparingly</strong>，来形容使用它的频率，同时也说了到了不要像在 Objective-C 那样，每次都去判断 Optionals 是否为 nil。</p>
 <p>那么应该怎最才最安全同时又很简洁呢？</p>
 <p>第一种方法：</p>
-<p><strong>If Let Binding</strong></p>
-<p>是不是觉得很熟悉？！在学习 Control Flow 的那个 Chapter中，if let 的用法就在讲 case 语句的时候用到了，这里再次出现！</p>
+</li>
+<li><p><strong>Optional Binding</strong></p>
+<p>是不是觉得很熟悉？！在学习 Control Flow 的那个 Chapter 中，if let 的用法就在讲 case 语句的时候用到了，这里再次出现！</p>
 <p>这次更新的用法是，if let 关键字不只可以定义一个变量，还可以一次性定义多个变量，非常方便。</p>
 <p>关于原理马特大神也讲的很清楚了，这里就不再敖述。</p>
 </li>
@@ -196,6 +197,11 @@
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myFavoriteSong: <span class="type">String?</span> = <span class="literal">nil</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> unwrappedMyFavoriteSong = myFavoriteSong ?? <span class="string">"I don't have a favorite song."</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(unwrappedMyFavoriteSong)</span><br></pre></td></tr></table></figure>
 <p><code>Console: I don&#39;t have a favorite song.</code></p>
 <p>两种方法各有千秋，记住 if let 和 ?? 这两个东西就可以啦 😈</p>
+</li>
+<li><p><strong>guard</strong></p>
+<p>再次读这本书的新版，新出的一种方式，这种方式的使用场景应该会在网络请求方面。特殊之处在于该方式需要在 else 控制中强制的进行 <strong>return</strong></p>
+ <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myFavoriteSong: <span class="type">String?</span> = <span class="literal">nil</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printTheSong</span><span class="params">(song: String?)</span></span> &#123;</span><br><span class="line">  <span class="keyword">guard</span> <span class="keyword">let</span> theSong = song <span class="keyword">else</span>  &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"I don't have a favorite song"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"My favorite song is \(theSong)."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printTheSong(myFavoriteSong)</span><br></pre></td></tr></table></figure>
+<p><code>Console: I don&#39;t have a favorite song.</code></p>
 </li>
 <li><p>Challenges</p>
 <p><strong>A</strong></p>
