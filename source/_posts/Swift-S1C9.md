@@ -61,9 +61,9 @@ This means that if you are handling a non-optional type then you are guaranteed 
 
   第一种方法：
 
-  **If Let Binding**
+- **Optional Binding**
 
-  是不是觉得很熟悉？！在学习 Control Flow 的那个 Chapter中，if let 的用法就在讲 case 语句的时候用到了，这里再次出现！
+  是不是觉得很熟悉？！在学习 Control Flow 的那个 Chapter 中，if let 的用法就在讲 case 语句的时候用到了，这里再次出现！
 
   这次更新的用法是，if let 关键字不只可以定义一个变量，还可以一次性定义多个变量，非常方便。
 
@@ -146,6 +146,31 @@ This means that if you are handling a non-optional type then you are guaranteed 
 
   两种方法各有千秋，记住 if let 和 ?? 这两个东西就可以啦 😈
 
+- **guard**
+
+  再次读这本书的新版，新出的一种方式，这种方式的使用场景应该会在网络请求方面。特殊之处在于该方式需要在 else 控制中强制的进行 **return**
+
+   ```swift
+  import Foundation
+
+  let myFavoriteSong: String? = nil
+
+  func printTheSong(song: String?) {
+    guard let theSong = song else  {
+      print("I don't have a favorite song")
+
+      return
+    }
+
+    print("My favorite song is \(theSong).")
+  }
+
+  printTheSong(myFavoriteSong)
+  ```
+
+  `
+  Console: I don't have a favorite song.
+  `
 - Challenges
 
   **A**
